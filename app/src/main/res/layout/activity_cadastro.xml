@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    android:onClick="salvarDados"
+    tools:context=".telas.CadastroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="60dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:onClick="voltarTela"
+            app:srcCompat="@drawable/left" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="194dp"
+            android:layout_height="63dp"
+            android:layout_marginStart="45dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Cadastro"
+            android:textColor="@color/azulEscuro"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:text="Novo Paciente"
+            android:textColor="@color/azulEscuro"
+            android:textSize="20sp" />
+
+        <!-- Container Branco com elementos -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/container"
+            android:elevation="6dp">
+
+            <!-- Texto e Botão do Nome -->
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Nome Completo:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editNome"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:hint="NOME"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <!-- Texto e Botão Idade -->
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Idade:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/editNome" />
+
+            <EditText
+                android:id="@+id/editIdade"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:hint="IDADE Nº"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/containerCadastro"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
+            <!-- Texto e Botão do Tempo Intitucionalizado-->
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="32dp"
+                android:text="Quanto tempo está institucionalizado?"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/editIdade" />
+
+            <EditText
+                android:id="@+id/editInstitucionalizado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:hint="TEMPO Nº"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/containerCadastro"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+
+            <!-- Texto e Botão do Tempo Genero-->
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Genero:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/editInstitucionalizado" />
+
+            <Spinner
+                android:id="@+id/spinnerGenero"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:textColor="#757171"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+            <!-- Texto e Botão do Tempo Altura-->
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Altura(mts):"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerGenero" />
+
+            <EditText
+                android:id="@+id/editAltura"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:hint="ALTURA Nº"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/containerCadastro"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+
+            <!-- Texto e Botão do Tempo Altura-->
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Doenças preexistentes:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/editAltura" />
+
+            <CheckBox
+                android:id="@+id/chkHipertensao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="#6E1A1A"
+                android:text="Hipertensão"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <CheckBox
+                android:id="@+id/chkDiabetes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:text="Diabetes"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chkHipertensao"
+                app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+            <CheckBox
+                android:id="@+id/chkNeurologica"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:text="Neurológicas"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/chkHipertensao" />
+
+            <CheckBox
+                android:id="@+id/chkOutros"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="20dp"
+                android:text="Outros"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/chkNeurologica"
+                app:layout_constraintTop_toBottomOf="@+id/chkDiabetes" />
+
+            <!-- Texto e Botão ACAMADO-->
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Acamado?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/chkOutros" />
+
+            <Spinner
+                android:id="@+id/spinnerAcamado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:textColor="#757171"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+            <!-- Texto e Botão do INCONTINENCIA-->
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Incontinência?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerAcamado" />
+
+            <CheckBox
+                android:id="@+id/chkUrinaria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="Urinaria"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <CheckBox
+                android:id="@+id/chkFecal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="5dp"
+                android:text="Fecal"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/chkUrinaria"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <CheckBox
+                android:id="@+id/chkNApresenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="Não Apresenta"
+                android:textColor="#757171"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/chkFecal"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+            <!-- Texto e Botão do CONTENÇÂO-->
+            <TextView
+                android:id="@+id/textView11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Em contensão?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/chkNApresenta" />
+
+            <Spinner
+                android:id="@+id/spinnerContencao"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:textColor="#757171"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <!-- Texto e Botão do CONCIENCIA-->
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Nível de consciência:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerContencao" />
+
+            <Spinner
+                android:id="@+id/spinnerConsciencia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:textColor="#757171"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+            <!-- Texto e Botão do Peso-->
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Peso:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerConsciencia" />
+
+            <EditText
+                android:id="@+id/editPeso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:hint="PESO  KG"
+                android:inputType="numberDecimal"
+                android:maxLines="1"
+                android:padding="15dp"
+                android:textColor="#757171"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@id/containerCadastro"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+            <!-- Texto e Botão do DEPENDENCIA-->
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Nível de dependência de cuidados:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/editPeso" />
+
+            <Spinner
+                android:id="@+id/spinnerDependencia"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:textColor="#757171"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+            <!-- Botoão de Salvar e Cancelar-->
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/white"
+                android:text="CANCELAR"
+                android:textColor="@color/azulEscuro"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/cardview_default_radius"
+                android:onClick="voltarTela"
+                app:layout_constraintEnd_toStartOf="@+id/btnSalvar"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerDependencia"
+                app:strokeColor="@color/azulEscuro"
+                app:strokeWidth="3dp" />
+
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/azulEscuro"
+                android:paddingEnd="20dp"
+                android:text="SALVAR"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/cardview_default_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerDependencia" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

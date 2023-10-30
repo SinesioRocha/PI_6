@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".telas.AvaliacaoActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="60dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:onClick="voltarTela"
+        app:srcCompat="@drawable/left" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="322dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Nova Avaliação"
+            android:textColor="@color/azulEscuro"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="10dp"
+            android:text="Avaliação do Paciente"
+            android:textColor="@color/azulEscuro"
+            android:textSize="20sp" />
+
+        <!-- Container Branco com elementos -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/containerCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/container"
+            android:elevation="6dp">
+
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="15dp"
+                android:text="Selecione o Paciente:"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinnerPacientes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="20dp"
+                android:background="@color/azulClaro"
+                android:textColor="#757171"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="317dp"
+                android:layout_height="59dp"
+                android:layout_marginStart="35dp"
+                android:layout_marginTop="35dp"
+                android:text="O paciente apresenta lesão por pressão no momento?"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerPacientes" />
+
+
+            <!-- Botoão de Salvar e Cancelar-->
+            <Button
+                android:id="@+id/btnCancelar"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@color/white"
+                android:onClick="btnNao"
+                android:text="NÃO"
+                android:textColor="@color/azulEscuro"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/cardview_default_radius"
+                app:layout_constraintEnd_toStartOf="@+id/btnSalvar"
+                app:layout_constraintStart_toStartOf="@+id/containerCadastro"
+                app:layout_constraintTop_toBottomOf="@+id/textView7"
+                app:strokeColor="@color/azulEscuro"
+                app:strokeWidth="3dp" />
+
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="150dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/azulEscuro"
+                android:onClick="btnSim"
+                android:paddingEnd="20dp"
+                android:text="SIM"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:cornerRadius="@dimen/cardview_default_radius"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/btnCancelar"
+                app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</ScrollView>

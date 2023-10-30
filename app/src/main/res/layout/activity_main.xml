@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundo"
+    tools:context=".telas.MainActivity">
+
+    <Button
+        android:id="@+id/btn_cadastrar_paciente"
+        android:layout_width="294dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="85dp"
+        android:backgroundTint="@color/azulEscuro"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="btnCadastro"
+        android:text="CADASTRAR PACIENTE"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/btn_nova_avaliacao"
+        android:layout_width="294dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="@color/azulEscuro"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="btnAvalicao"
+        android:text="NOVA AVALIAÇÃO"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar_paciente" />
+
+    <Button
+        android:id="@+id/btn_historico"
+        android:layout_width="294dp"
+        android:layout_height="61dp"
+        android:layout_marginTop="35dp"
+        android:backgroundTint="@color/azulEscuro"
+        android:fontFamily="sans-serif-medium"
+        android:onClick="btnHistorico"
+        android:text="HISTÓRICO"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:elevation="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_nova_avaliacao" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="420dp"
+        android:layout_height="250dp"
+        android:background="@color/azulEscuro"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
